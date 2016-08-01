@@ -1,12 +1,9 @@
 <?php
 
+require_once 'lib/class.websocket_client.php';
+$client = new WebsocketClient;
+$client->connect('www12205u.sakura.ne.jp', 8000, '/home', 'www12205u.sakura.ne.jp');
+$client->sendData('1');
+$client->disconnect();
 
-
-/*
-namespace WebSocket\Application;
-require_once '../server/lib/WebSocket/Application/Application.php';
-require_once '../server/lib/WebSocket/Application/HomeApplication.php';
-$app = new HomeApplication();
-$app->pulse();
-*/
 ?>

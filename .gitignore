@@ -3,6 +3,8 @@
 /laravel_demo/
 /php-websocket/
 /sentinel_demo/
+/pulse/error_log
+/pulse/nohup_log
 /wcode/
 
 # Eclipse/PDT

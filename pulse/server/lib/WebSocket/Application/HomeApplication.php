@@ -8,7 +8,7 @@ class HomeApplication extends Application {
 		$this->_clients[$id] = $client;
 
 		$date = $this->pulse();
-		$this->sendAll($date);
+		$this->sendTo($id, $date);
 	}
 
 	public function onDisconnect($client){
@@ -32,7 +32,8 @@ class HomeApplication extends Application {
 	}
 
 	private function pulse(){
-		$data = date('Y/m/d H:i:s');
+		date_default_timezone_set('Asia/Tokyo');
+		$data = date('Y/m/d H:i e');
 		return json_encode($data);
 	}
 }

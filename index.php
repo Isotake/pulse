@@ -34,31 +34,38 @@
 			justify-content: center;
 		}
 	</style>
-    <script src="./pulse/client/js/jquery.min.js"></script>
-</head>
-<body>
-    <div id="container">
-		0000/00/00 00:00
-    </div>
 	<script type="text/javascript">
-		$(function(){
+		window.onload = function(){
 			var socket;
-			if ( $.browser.mozilla ){
-				socket = new MozWebSocket('ws://www12205u.sakura.ne.jp:8000/home');
-			} else {
-				socket = new WebSocket('ws://www12205u.sakura.ne.jp:8000/home');
-			}
+			socket = new WebSocket('ws://www12205u.sakura.ne.jp:8000/home');
 			socket.onopen = function(msg){
 				console.log('online');
 			};
 			socket.onmessage = function(msg){
 				var response = JSON.parse(msg.data);
-				$('#container').text(response);
+				document.getElementById('container').textContent = response;
 			};
 			socket.onclose = function(msg){
 				console.log('offline');
 			};
-		});
+		};
 	</script>
+</head>
+<body>
+    <div id="container">
+		0000/00/00 00:00
+    </div>
+<!-- google analytics
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-26081171-2']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+-->
 </body>
 </html>

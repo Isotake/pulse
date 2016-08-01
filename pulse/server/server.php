@@ -13,16 +13,24 @@ require(__DIR__ . '/lib/SplClassLoader.php');
 $classLoader = new SplClassLoader('WebSocket', __DIR__ . '/lib');
 $classLoader->register();
 
-$server = new \WebSocket\Server('www12205u.sakura.ne.jp', 8000, false);
-//$server = new \WebSocket\Server('127.0.0.1', 8000, false);
-
+/*
+$server = new \WebSocket\Server('127.0.0.1', 8000, false);
 // server settings:
 $server->setMaxClients(100);
 $server->setCheckOrigin(true);
-$server->setAllowedOrigin('www12205u.sakura.ne.jp');
-//$server->setAllowedOrigin('foo.lh');
+$server->setAllowedOrigin('foo.lh');
 $server->setMaxConnectionsPerIp(100);
 $server->setMaxRequestsPerMinute(2000);
+*/
+
+$server = new \WebSocket\Server('www12205u.sakura.ne.jp', 8000, false);
+// server settings: www12205u.sakura.ne.jp
+$server->setMaxClients(100);
+$server->setCheckOrigin(true);
+$server->setAllowedOrigin('www12205u.sakura.ne.jp');
+$server->setMaxConnectionsPerIp(100);
+$server->setMaxRequestsPerMinute(2000);
+
 
 // Hint: Status application should not be removed as it displays usefull server informations:
 $server->registerApplication('home', \WebSocket\Application\HomeApplication::getInstance());
