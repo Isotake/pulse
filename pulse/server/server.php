@@ -31,6 +31,15 @@ $server->setAllowedOrigin('www12205u.sakura.ne.jp');
 $server->setMaxConnectionsPerIp(100);
 $server->setMaxRequestsPerMinute(2000);
 
+/*
+$server = new \WebSocket\Server('takehaya.jp', 8000, false);
+// server settings: takehaya.jp
+$server->setMaxClients(100);
+$server->setCheckOrigin(true);
+$server->setAllowedOrigin('takehaya.jp');
+$server->setMaxConnectionsPerIp(100);
+$server->setMaxRequestsPerMinute(2000);
+*/
 
 // Hint: Status application should not be removed as it displays usefull server informations:
 $server->registerApplication('home', \WebSocket\Application\HomeApplication::getInstance());

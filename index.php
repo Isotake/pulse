@@ -5,7 +5,7 @@
 	<meta http-equiv="Content-Language" content="ja">
 	<meta http-equiv="Content-Script-Type" content="text/javascript">
 	<meta http-equiv="Content-Style-Type" content="text/css">
-	<title>home.html</title>
+	<title>takehaya.jp</title>
 	<style type="text/css">
 		html, body, div {
 			margin:0;
