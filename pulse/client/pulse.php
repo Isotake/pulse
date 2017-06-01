@@ -2,7 +2,7 @@
 
 require_once 'lib/class.websocket_client.php';
 $client = new WebsocketClient;
-$client->connect('www12205u.sakura.ne.jp', 8000, '/home', 'www12205u.sakura.ne.jp');
+$client->connect('takehaya.jp', 8000, '/home', 'takehaya.jp');
 $client->sendData('1');
 $client->disconnect();
 

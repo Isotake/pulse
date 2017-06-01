@@ -37,7 +37,7 @@
 	<script type="text/javascript">
 		window.onload = function(){
 			var socket;
-			socket = new WebSocket('ws://www12205u.sakura.ne.jp:8000/home');
+			socket = new WebSocket('wss://takehaya.jp:8000/home');
 			socket.onopen = function(msg){
 				console.log('online');
 			};

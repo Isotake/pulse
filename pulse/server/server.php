@@ -23,11 +23,11 @@ $server->setMaxConnectionsPerIp(100);
 $server->setMaxRequestsPerMinute(2000);
 */
 
-$server = new \WebSocket\Server('www12205u.sakura.ne.jp', 8000, false);
+$server = new \WebSocket\Server('takehaya.jp', 8000, true);
 // server settings: www12205u.sakura.ne.jp
 $server->setMaxClients(100);
 $server->setCheckOrigin(true);
-$server->setAllowedOrigin('www12205u.sakura.ne.jp');
+$server->setAllowedOrigin('takehaya.jp');
 $server->setMaxConnectionsPerIp(100);
 $server->setMaxRequestsPerMinute(2000);
 

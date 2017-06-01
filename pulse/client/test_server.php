@@ -11,7 +11,7 @@ for($i = 0; $i < $testClients; $i++)
 {
 	$clients[$i] = new WebsocketClient;
 //	$clients[$i]->connect('127.0.0.1', 8000, '/home', 'foo.lh');
-	$clients[$i]->connect('www12205u.sakura.ne.jp', 8000, '/home', 'www12205u.sakura.ne.jp');
+	$clients[$i]->connect('takehaya.jp', 8000, '/home', 'takehaya.jp');
 }
 usleep(5000);
 

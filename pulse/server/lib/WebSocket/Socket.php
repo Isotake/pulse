@@ -59,7 +59,8 @@ class Socket
 	
 	private function applySSLContext()
 	{		
-		$pem_file = './server.pem';
+//		$pem_file = './server.pem';
+		$pem_file = '/etc/letsencrypt/live/takehaya.jp/server.pem';
 		$pem_passphrase = 'shinywss';		
 		
 		// Generate PEM file
